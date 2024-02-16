@@ -1,2 +1,2 @@
 # my-tera-repo
-chal nikal
+terrsform code
