@@ -1,2 +1,2 @@
 # my-tera-repo
-terrsform code
+terraform code
