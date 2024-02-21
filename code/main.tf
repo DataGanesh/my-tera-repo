@@ -34,3 +34,8 @@ module "nat_gateway" {
 
   
 } 
+
+module "security_group" {
+  source = "../modules/security_groups"
+  vpc_id = module.vpc.vpc_id
+}
