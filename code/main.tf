@@ -3,6 +3,8 @@ provider "aws" {
   profile = "ganesh"
 }
 
+# create vpc
+
 module "vpc" {
   source                       = "../modules/vpc"
   region                       = var.region
@@ -20,7 +22,7 @@ module "vpc" {
 # create nat gateway
 
 module "nat_gateway" {
-  source                        = "../modules/nat_gateway"
+  source                        = "../modules/nat_gateway" 
   public_subnet_az1_id          = module.vpc.public_subnet_az1_id
   internet_gateway              = module.vpc.internet_gateway
   public_subnet_az2_id          = module.vpc.public_subnet_az2_id
@@ -31,4 +33,4 @@ module "nat_gateway" {
   private_data_subnet_az2_id    = module.vpc.private_data_subnet_az2_id
 
   
-}
+} 
